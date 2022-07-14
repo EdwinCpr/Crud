@@ -52,6 +52,7 @@ button {
   background-color: #6946a6 ;
   color: #fff;
   padding: 6.5rem 0rem;
+  position: fixed;
 } 
 
 .form-title {
@@ -181,7 +182,13 @@ button {
   /************ UsersForm ***********/
 
   #form-submit {
-    width: 70%;
+    width: 45%;
   }
 
+  .users-list {
+    position: absolute;
+    width: 55%;
+    right: 0%;
+    overflow: scroll;
+  }
 }

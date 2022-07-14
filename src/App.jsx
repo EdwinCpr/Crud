@@ -3,6 +3,7 @@ import axios from "axios"
 import './App.css'
 import UsersList from "./components/UsersList"
 import UsersForm from './components/UsersForm';
+import Modal from './components/Images/Modal';
 
 function App() {
  
@@ -21,8 +22,9 @@ function App() {
   return (
     <div className="App">
       <div className="app-flex">
-      <UsersForm getUsers={getUsers}/>
-      <UsersList users={users}/>
+      {/* <UsersForm getUsers={getUsers}/> */}
+      {/* <UsersList users={users}/> */}
+      <Modal/>
       </div>
     </div>
   )

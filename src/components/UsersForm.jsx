@@ -72,7 +72,7 @@ const UsersForm = ({ getUsers }) => {
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Contraseña"
             />
-            <button type="button" className="btn-view" onClick={() => setIsVisible(!isVisible)}>{isVisible ? <i class="fa-regular fa-eye"></i> : <i class="fa-regular fa-eye-slash"></i>}</button>
+            <button type="button" className="btn-view" onClick={() => setIsVisible(!isVisible)}>{isVisible ? <i className="fa-regular fa-eye"></i> : <i className="fa-regular fa-eye-slash"></i>}</button>
         </div>
         <div className="input-container">
             <label htmlFor="birthday" className="title-form">Fecha de cumpleaños</label>

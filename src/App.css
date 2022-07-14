@@ -33,7 +33,7 @@ html {
   text-align: center;
   background-color: #6946a6 ;
   color: #fff;
-  padding: 1rem 0rem;
+  padding: 4rem 0rem;
 } 
 
 .form-title {
@@ -55,19 +55,21 @@ html {
   outline: 0;
   border: 0;
   margin-top: 7px;
+  padding: 0rem .5rem;
 }
 
 .input-password {
   width: 75%;
-  height: 1.7rem;
+  height: 2rem;
   border: 0;
   outline: 0;
   margin-top: 7px;
+  padding: 0rem .5rem;
 }
 
 .input-date {
   width: 80%;
-  height: 1.7rem;
+  height: 2rem;
   border: 0;
   outline: 0;
   margin-top: 7px;
@@ -78,7 +80,7 @@ html {
   width: 5.6%;
   border: 0;
   background-color: transparent;
-  height: 1.7rem;
+  height: 2rem;
   background-color: white;
   margin-left: -.6%;
   display: inline-block;
@@ -86,7 +88,7 @@ html {
 
 .btn-submit {
   margin-top: 1rem;
-  padding: .2rem 2rem; 
+  padding: .3rem 3rem; 
   font-weight: bold;
   background-color: #48297c;
   border: 1px solid #fff;

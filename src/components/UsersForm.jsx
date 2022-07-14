@@ -38,6 +38,7 @@ const UsersForm = ({ getUsers }) => {
             id="first_Name"
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
+            placeholder="Nombre"
             />
         </div>
 
@@ -49,6 +50,7 @@ const UsersForm = ({ getUsers }) => {
             id="last_Name"
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
+            placeholder="Apellido"
             />
         </div>
 
@@ -60,6 +62,7 @@ const UsersForm = ({ getUsers }) => {
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            placeholder="Email"
             />
         </div>
 
@@ -71,6 +74,7 @@ const UsersForm = ({ getUsers }) => {
             id="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            placeholder="Contraseña"
             />
             <button type="button" className="btn-view" onClick={() => setIsVisible(!isVisible)}><i className="fa-solid fa-eye"></i></button>
 
@@ -84,6 +88,7 @@ const UsersForm = ({ getUsers }) => {
             id="birthday"
             value={birthday}
             onChange={(e) => setBirthday(e.target.value)}
+            placeholder="Fecha de cumpleaños"
             />
         </div>
 

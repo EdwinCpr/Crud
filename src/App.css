@@ -185,6 +185,20 @@ button {
     width: 45%;
   }
 
+  .btn-submit:active {
+    box-shadow: unset;
+    color: unset;
+    background-color: unset;
+  }
+
+  .btn-submit:hover {
+    box-shadow: unset;
+    color: #48297c;
+    background-color: #fff;
+  }
+
+  /************* UsersList *************/
+
   .users-list {
     position: absolute;
     width: 55%;

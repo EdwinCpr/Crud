@@ -22,13 +22,12 @@ const UsersForm = ({ getUsers }) => {
 
     axios.post(`https://users-crud1.herokuapp.com/users/`, user)
       .then(() => getUsers())
-      .catch((error) => console.log(error.response))
-  };
+    };
 
   return (
     <form onSubmit={submit} id="form-submit">
       <div className="form-title">
-        <h1>Crear usuario</h1>
+        <h1 className="create-user">Crear usuario</h1>
       </div>
       <div className="input-container">
         <label htmlFor="first_Name" className="title-form">Nombre</label>
@@ -41,7 +40,6 @@ const UsersForm = ({ getUsers }) => {
             placeholder="Nombre"
             />
         </div>
-
         <div className="input-container">
             <label htmlFor="last_Name" className="title-form">Apellido</label>
             <input
@@ -53,7 +51,6 @@ const UsersForm = ({ getUsers }) => {
             placeholder="Apellido"
             />
         </div>
-
         <div className="input-container">
             <label htmlFor="email" className="title-form">Email</label>
             <input
@@ -65,7 +62,6 @@ const UsersForm = ({ getUsers }) => {
             placeholder="Email"
             />
         </div>
-
         <div className="input-container">
             <label htmlFor="password" className="title-form">Contraseña</label>
             <input
@@ -76,10 +72,8 @@ const UsersForm = ({ getUsers }) => {
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Contraseña"
             />
-            <button type="button" className="btn-view" onClick={() => setIsVisible(!isVisible)}><i className="fa-solid fa-eye"></i></button>
-
+            <button type="button" className="btn-view" onClick={() => setIsVisible(!isVisible)}>{isVisible ? <i class="fa-regular fa-eye"></i> : <i class="fa-regular fa-eye-slash"></i>}</button>
         </div>
-
         <div className="input-container">
             <label htmlFor="birthday" className="title-form">Fecha de cumpleaños</label>
             <input
@@ -91,7 +85,6 @@ const UsersForm = ({ getUsers }) => {
             placeholder="Fecha de cumpleaños"
             />
         </div>
-
       <button type="submit" className="btn-submit">Crear</button>
     </form>
   );

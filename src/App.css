@@ -15,17 +15,34 @@ html {
   box-sizing: inherit;
 }
 
+ul {
+  list-style: none;
+}
+
+.margin-top-10px {
+  padding-top: 10px;
+}
+
+.font-small {
+  font-size: 15px;
+}
+
+.fa {
+  color: white;
+  height: 1rem;
+  padding-right: 6px;
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+}
+
 /**************** App **************/
 
 .app-flex {
   display: flex;
   flex-direction: column;
-}
-
-/************** UsersList ***********/
-
-.users-list {
-  background-color: aquamarine;
 }
 
 /**************** UsersForm **************/
@@ -39,6 +56,7 @@ html {
 
 .form-title {
   padding-bottom: 1rem;
+  box-shadow: black 3px 3px 7px;
 }
 
 .title-form {
@@ -89,16 +107,81 @@ html {
 
 .btn-submit {
   margin-top: 1rem;
-  padding: .3rem 3rem; 
+  padding: .6rem 4rem; 
   font-weight: bold;
   background-color: #48297c;
   border: 1px solid #fff;
   color: white;
-  box-shadow: #48297c 5px 6px 1px 1px;
+  box-shadow: #311561 5px 6px 1px 1px;
 }
 
 .btn-submit:active {
   box-shadow: unset;
   color: #48297c;
   background-color: #fff;
+}
+
+/************** UsersList ***********/
+
+.users-list {
+  background-color: rgb(238, 238, 238);
+  width: 100%;
+  margin: auto;
+}
+
+.user-title {
+  text-align: center;
+  padding: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: white;;
+}
+
+.user-card {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 95%;
+  margin: auto;
+  background-color: #6946a6
+}
+
+.card-flex {
+  display: flex;
+  gap: .5rem;
+  text-align: center;
+  padding: .50rem 0rem;
+  justify-content: space-between;
+}
+
+.card-date {
+  text-align: center;
+}
+
+.icon-trash {
+  height: 2rem;
+}
+
+.card-icons {
+  text-align: right;
+}
+/************ Mediaquery *************/
+
+@media(min-width: 768px) {
+  /************ App ************/
+
+  .app-flex {
+    flex-direction: row;
+  }
+
+  /************ UsersForm ***********/
+
+  #form-submit {
+    width: 70%;
+  }
+
 }

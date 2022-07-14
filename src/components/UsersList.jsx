@@ -1,23 +1,31 @@
 import React from "react";
+import Trash from "./Images/Trash.svg"
+import Edit from "./Images/Edit.svg"
 
 const UsersList = ({ users }) => {
     return (
-        <ul className="users-list">
-            <h2>Lista de usuarios:</h2>
+        <div className="users-list">
+            <h2 className="user-title">Lista de usuarios:</h2>
+            <div className="card">
             {
             users.map(user =>(
-                <li key={user.id}>
-                    <div><b>Nombre:</b> {user.first_name} </div>
-                    <div><b>Apellido:</b> {user.last_name} </div>
-                    <div><b>Email:</b> {user.email} </div>
-                    <div><b>Contraseña:</b> {user.password} </div>
-                    <div><b>Fecha de cumpleaños:</b> {user.birthday} </div>
-                </li>
-                
+                <div key={user.id} className="user-card">
+                    <div className="card-name">
+                        <p className="font-small"><i class="fa-solid fa-user fa"></i><b>Nombre y apellido: {user.first_name} {user.last_name}</b></p>
+                    </div>
+                    <div className="card-data">
+                        <p className="font-small margin-top-10px"><i class="fa-solid fa-envelope fa"></i><b>Email: {user.email}</b></p>
+                        <p className="margin-top-10px font-small"><i class="fa-solid fa-lock fa"></i><b>Contraseña: {user.password}</b></p>                    </div>
+                    <p className="font-small margin-top-10px"><b></b><i className="padding-right-4px fa fa-birthday-cake"></i>{user.birthday}</p>
+                    <div className="card-icons">
+                        <button><img src={Trash} alt="" className="icon-trash"/></button>
+                        <button><img src={Edit} alt="" className="icon-trash"/></button>
+                    </div>
+                </div>
             ))
-
             }
-        </ul>
+            </div>
+        </div>
 
     );
     

@@ -38,12 +38,15 @@ button {
   border: 0;
 }
 
+.margin-left-10px {
+  margin-left: 30px;
+}
 /**************** App **************/
 
-/* .app-flex {
+.app-flex {
   display: flex;
   flex-direction: column;
-} */
+}
 
 /**************** UsersForm **************/
 
@@ -52,11 +55,15 @@ button {
   background-color: #6946a6 ;
   color: #fff;
   padding: 6.5rem 0rem;
+  border-bottom-left-radius: 150px;
+  border-bottom-right-radius: 150px;
 } 
 
 .form-title {
   padding-bottom: 1rem;
-  box-shadow: black 3px 3px 7px;
+  border-bottom: 2px solid black;
+  width: 80%;
+  margin: auto;
 }
 
 .title-form {
@@ -105,9 +112,10 @@ button {
   display: inline-block;
 }
 
-.btn-submit {
+.btn-submit, .btn-reset {
   margin-top: 1rem;
-  padding: .6rem 4rem; 
+  padding: .6rem 0rem;
+  width: 30%;
   font-weight: bold;
   background-color: #48297c;
   border: 1px solid #fff;
@@ -115,7 +123,7 @@ button {
   box-shadow: #311561 5px 6px 1px 1px;
 }
 
-.btn-submit:active {
+.btn-submit:active, .btn-reset:active {
   box-shadow: unset;
   color: #48297c;
   background-color: #fff;
@@ -124,7 +132,6 @@ button {
 /************** UsersList ***********/
 
 .users-list {
-  background-color: rgb(238, 238, 238);
   width: 100%;
   margin: auto;
   padding-bottom: 2rem;
@@ -138,7 +145,7 @@ button {
 .card {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   color: white;;
 }
 
@@ -188,10 +195,11 @@ button {
 
 .modal {
   width: 90%;
-  height: 15rem;
-  background: white;
+  height: 17rem;
+  background: #fff;
   text-align: center;
   color: red;
+  border-radius: 10px;
 }
 
 .modal-img {
@@ -212,12 +220,14 @@ button {
   background: red;
   padding: .50rem 2rem;
   border-radius: 4px;
+  color: #fff;
 }
 
 .cancel {
-  background: rgb(224, 223, 223);
+  background: rgb(170, 161, 161);
   padding: .50rem 2rem;
   border-radius: 4px;
+  color: #fff;
 }
 
 /************ Mediaquery *************/
@@ -232,17 +242,25 @@ button {
   /************ UsersForm ***********/
 
   #form-submit {
-    width: 45%;
+    width: 40%;
+    height: 95vh;
+    margin-top: 1rem;
     position: fixed;
+    border-radius: 40px;
+    margin-left: .50rem;
   }
 
-  .btn-submit:active {
+  .btn-submit {
+    width: 30%;
+  }
+
+  .btn-submit:active, .btn-reset:active {
     box-shadow: unset;
     color: unset;
     background-color: unset;
   }
 
-  .btn-submit:hover {
+  .btn-submit:hover, .btn-reset:hover {
     box-shadow: unset;
     color: #48297c;
     background-color: #fff;

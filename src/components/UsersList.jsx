@@ -1,15 +1,12 @@
-import React, { useState } from "react";
 import Trash from "./Images/Trash.svg"
 import Edit from "./Images/Edit.svg"
-import Modal from "./Modal";
 
-const UsersList = ({ users }) => {
-    const [isActive, setIsActive] = useState(false)
+const UsersList = ({ users, setIsActive, setId, selectUser }) => {
 
-    const deleteUser = (id) => {
-        axios.delete(`https://users-crud1.herokuapp.com/users/${id}/`)
-        console.log(id)
-      }
+    const selectID = (id) => {
+        setIsActive(true)
+        setId(id)
+    }
     return (
         <div className="users-list">
             <h2 className="user-title">Lista de usuarios:</h2>
@@ -22,19 +19,17 @@ const UsersList = ({ users }) => {
                     </div>
                     <div className="card-data">
                         <p className="font-small margin-top-10px"><i className="fa-solid fa-envelope fa"></i><b>Email: {user.email}</b></p>
-                        <p className="margin-top-10px font-small"><i className="fa-solid fa-lock fa"></i><b>Contraseña: {user.password}</b></p>                    </div>
-                    <p className="font-small margin-top-10px"><b></b><i className="padding-right-4px fa fa-birthday-cake"></i>{user.birthday}</p>
+                        <p className="margin-top-10px font-small"><i className="fa-solid fa-lock fa"></i><b>Contraseña: {user.password.length} caracteres</b></p>                    </div>
+                        <p className="font-small margin-top-10px"><b></b><i className="padding-right-4px fa fa-birthday-cake"></i>{user.birthday}</p>
                     <div className="card-icons">
-                        <button onClick={() => setIsActive(true)}><img src={Trash} alt="" className="icon-trash"/></button>
-                        <button><img src={Edit} alt="" className="icon-trash"/></button>
+                        <button onClick={() => selectID(user.id)}><img src={Trash} alt="icon-trash" className="icon-trash"/></button>
+                        <button onClick={() => selectUser(user)}><img src={Edit} alt="icon-edit" className="icon-trash"/></button>
                     </div>
                 </div>
             ))
             }
-            {isActive && <Modal setIsActive={setIsActive}/>}
             </div>
         </div>
-
     );
     
 }

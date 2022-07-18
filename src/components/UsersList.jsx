@@ -9,7 +9,19 @@ const UsersList = ({ users, setIsActive, setId, selectUser, view, setView }) => 
     return (
         <div className="users-list">
             <h2 className="user-title">Lista de usuarios:</h2>
-            <button type="button" className="view" onClick={() => setView(!view)}><h3>Mostrar contraseñas</h3>{view ? <i className="fa-regular fa-eye fa-two"></i> : <i className="fa-regular fa-eye-slash fa-two"></i>}</button>
+            <button type="button" className="view" onClick={() => setView(!view)}>{view ? (
+                <>
+                    <h3>Ocultar contraseñas</h3>
+                    <i className="fa-regular fa-eye-slash fa-two"></i>
+                </>
+            
+            ) : (
+                <>
+                    <h3>Mostrar contraseñas</h3>
+                    <i className="fa-regular fa-eye fa-two"></i>
+                </>
+            )}
+            </button>
             <div className="card">
             {
             users.map(user =>(

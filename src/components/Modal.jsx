@@ -1,6 +1,4 @@
-import axios from 'axios';
 import React from 'react';
-import Warningg from "./Images/Warningg.png"
 
 const Modal = ({ setIsActive, ID, getUsers}) => {
     const deleteUser = () => {

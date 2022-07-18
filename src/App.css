@@ -11,6 +11,9 @@ html {
   box-sizing:border-box;
 }
 
+body {
+  background-image: url("./components/Images/HubbleLegacyField.jpg");
+}
 *, *:before, *:after{
   box-sizing: inherit;
 }
@@ -28,7 +31,7 @@ ul {
 }
 
 .fa {
-  color: white;
+  color: #fff;
   height: 1rem;
   padding-right: 6px;
 }
@@ -52,7 +55,8 @@ button {
 
 #form-submit {
   text-align: center;
-  background-color: #6946a6 ;
+  background-color: #b1dadba1;
+  border: 1px solid #000000;
   color: #fff;
   padding: 6.5rem 0rem;
   border-bottom-left-radius: 150px;
@@ -61,7 +65,7 @@ button {
 
 .form-title {
   padding-bottom: 1rem;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #000;
   width: 80%;
   margin: auto;
 }
@@ -107,7 +111,7 @@ button {
   border: 0;
   background-color: transparent;
   height: 2rem;
-  background-color: white;
+  background-color: #fff;
   margin-left: -.6%;
   display: inline-block;
 }
@@ -117,9 +121,9 @@ button {
   padding: .6rem 0rem;
   width: 30%;
   font-weight: bold;
-  background-color: #48297c;
+  background-color: #b1dadb;
   border: 1px solid #fff;
-  color: white;
+  color: #fff;
   box-shadow: #311561 5px 6px 1px 1px;
 }
 
@@ -130,6 +134,11 @@ button {
 }
 
 /************** UsersList ***********/
+.view {
+  color: #fff;
+  margin-bottom: 1rem;
+  width: 100%;
+}
 
 .users-list {
   width: 100%;
@@ -140,22 +149,24 @@ button {
 .user-title {
   text-align: center;
   padding: 1rem;
+  color: #fff;
 }
 
 .card {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  color: white;;
+  color: #fff;
 }
 
 .user-card {
-  border: 1px solid black;
+  border: 7px solid #b1dadb;
+  box-shadow: 0px 0px 5px 5px #311561;
   border-radius: 10px;
   padding: 1rem;
   width: 95%;
   margin: auto;
-  background-color: #6946a6
+  background-color: #000000
 }
 
 .card-flex {
@@ -194,12 +205,13 @@ button {
 }
 
 .modal {
+  border: 2px solid #b1dadb;
   width: 90%;
-  height: 17rem;
-  background: #fff;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.562);
   text-align: center;
-  color: red;
   border-radius: 10px;
+  color: #fff;
 }
 
 .modal-img {

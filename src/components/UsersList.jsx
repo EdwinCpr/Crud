@@ -1,8 +1,7 @@
 import Trash from "./Images/Trash.svg"
 import Edit from "./Images/Edit.svg"
 
-const UsersList = ({ users, setIsActive, setId, selectUser }) => {
-
+const UsersList = ({ users, setIsActive, setId, selectUser, view, setView }) => {
     const selectID = (id) => {
         setIsActive(true)
         setId(id)
@@ -10,6 +9,7 @@ const UsersList = ({ users, setIsActive, setId, selectUser }) => {
     return (
         <div className="users-list">
             <h2 className="user-title">Lista de usuarios:</h2>
+            <button type="button" className="view" onClick={() => setView(!view)}><h3>Mostrar contraseñas</h3>{view ? <i className="fa-regular fa-eye fa-two"></i> : <i className="fa-regular fa-eye-slash fa-two"></i>}</button>
             <div className="card">
             {
             users.map(user =>(
@@ -19,7 +19,7 @@ const UsersList = ({ users, setIsActive, setId, selectUser }) => {
                     </div>
                     <div className="card-data">
                         <p className="font-small margin-top-10px"><i className="fa-solid fa-envelope fa"></i><b>Email: {user.email}</b></p>
-                        <p className="margin-top-10px font-small"><i className="fa-solid fa-lock fa"></i><b>Contraseña: {user.password.length} caracteres</b></p>                    </div>
+                        <p className="margin-top-10px font-small"><i className="fa-solid fa-lock fa"></i><b>Contraseña: {view ? `${user.password}` : `${user.password.length} caracteres`}</b></p>                    </div>
                         <p className="font-small margin-top-10px"><b></b><i className="padding-right-4px fa fa-birthday-cake"></i>{user.birthday}</p>
                     <div className="card-icons">
                         <button onClick={() => selectID(user.id)}><img src={Trash} alt="icon-trash" className="icon-trash"/></button>

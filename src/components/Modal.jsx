@@ -12,10 +12,6 @@ const Modal = ({ setIsActive, ID, getUsers}) => {
         <div>
             <div className="modal-container">
                 <div className="modal">
-                    <div className="modal-img">
-                        <h1>Alerta!</h1>
-                        <img src={Warningg} alt="img-warning" className="img-modal"/>
-                    </div>
                     <div className="modal-info">
                         <h3>¿Desea eliminar este usuario?</h3>
                     </div>

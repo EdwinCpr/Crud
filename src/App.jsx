@@ -26,11 +26,16 @@ function App() {
     setUserSelect(null)
   }
 
+  const [view, setView] = useState(false)
   return (
     <div className="App">
       <div className="app-flex">
-      <UsersForm getUsers={getUsers} userSelect={userSelect} deselectUser={deselectUser}/>
-      <UsersList users={users} getUsers={getUsers} setIsActive={setIsActive} setId={setId} ID={ID} setUserSelect={setUserSelect} selectUser={selectUser}/>
+      <div className="UsersForm">
+        <UsersForm getUsers={getUsers} userSelect={userSelect} deselectUser={deselectUser}/>
+      </div>
+        <div className="UsersList">
+          <UsersList users={users} getUsers={getUsers} setIsActive={setIsActive} setId={setId} ID={ID} setUserSelect={setUserSelect} selectUser={selectUser} view={view} setView={setView}/>
+        </div>
       </div>
       {isActive && <Modal getUsers={getUsers} ID={ID} setIsActive={setIsActive}/>}
     </div>
